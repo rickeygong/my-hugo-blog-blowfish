@@ -1,22 +1,25 @@
 languageCode = "zh-cn"
 languageName = "简体中文"
-weight = 4
-title = "Blowfish"
+weight = 1
+title = "Donghai Gong"
 
 [params]
   displayName = "简体中文"
   isoCode = "zh-cn"
   rtl = false
   dateFormat = "2006-01-02"
-  logo = "img/blowfish_logo_transparent.png"
-  description = "一个强大、轻量级的 Hugo 主题。"
+  logo = ""
+  description = ""
 
 [params.author]
-  name = "Donghai"
-  image = "img/avatar.png"
-  headline = "一个强大、轻量级的 Hugo 主题。"
-  bio = "一个强大、轻量级的 Hugo 主题。"
-  #links = [
-  #  { x-twitter = "https://twitter.com/burufugu" },
-  #  { github = "https://github.com/nunocoracao/blowfish" },
-  #]
+  name = "Donghai" # 作者名。此参数将展示在文章页脚。并且如果主页使用了个人资料布局，也会展示此值
+  image = "img/ava.png" # 作者头像的文件路径。图像应该是 1:1 的宽高比。可以放在网站的 assets/ 文件夹中，也可以是外部 URL
+  headline = "Software Engineer | using Xamarin, .NET, MSSQL"
+  #headline = "我真诚的记录着，因为生活值得" # 包含作者头衔的 Markdown。它将展示在主页中作者姓名打分下方
+  bio = "我真诚的记录着，因为生活值得" # 包含作者简介的 Markdown。它将展示在文章页脚
+  #email = '' # 作者邮箱。如果启用了“通过邮件回复”功能，则会启用此值
+  links = [
+    { github = "https://github.com/rickeygong" },
+    { linkedin = "https://linkedin.com/in/donghai-gong-11a74b225/" },
+    { email = "mailto:mgrowup@outlook.com" },
+  ]

@@ -16,8 +16,8 @@
   weight = 10
 
 [[main]]
-  name = "游玩"
-  pageRef = "trip"
+  name = "Categories"
+  pageRef = "categories"
   weight = 100
 
 [[main]]
@@ -44,11 +44,21 @@
 # the copyright notice. Configure as per the main menu above.
 
  [[footer]]
-   name = "标签"
+   name = "关于"
    pageRef = "tags"
    weight = 10
 
  [[footer]]
-   name = "作者"
+   name = "联系"
    pageRef = "authors"
    weight = 20
+
+ [[footer]]
+   name = "RSS"
+   pageRef = "tags"
+   weight = 30
+
+ [[footer]]
+   name = "请喝咖啡"
+   pageRef = "authors"
+   weight = 40
