@@ -40,7 +40,7 @@ hotlinkFeatureImage = false
 # highlightCurrentMenuArea = true
 
 # 开启智能目录，视图中的项目将会被高亮显示
-# smartTOC = true
+smartTOC = true
 # 当开启智能目录，如果目录级别不再被聚焦时，将会隐藏更深层次的目录
 # smartTOCHideUnfocusedChildren = true
 
