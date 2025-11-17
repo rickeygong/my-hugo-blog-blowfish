@@ -1,11 +1,11 @@
 ---
 title: "About"
-date: 2022-01-25
 description: "欢迎来到我的博客"
-summary: "了解更多关于我和我创建博客的初衷。"
-tags: ["welcome", "new", "about", "first"]
+summary: "了解更多关于我和我创建博客的初衷"
 layout: "simple"
-toc: true
+showDate: false
+showLikes: false
+showPagination: false
 ---
 
 ## About me
