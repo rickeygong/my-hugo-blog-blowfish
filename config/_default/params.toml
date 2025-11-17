@@ -60,6 +60,12 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showThemeAttribution = true # 是否在网站底部中显示"powered by" 的主题归属信息。如果禁用此参数，请考虑在你网站的其他位置设置主题归属信息，例如在关于页面
   showAppearanceSwitcher = true # 是否在也页面底部显示外观切换器。浏览器的本地存储会缓存访问者的偏好设置
   showScrollToTop = true # 当设置为 true 时，显示返回顶部的箭头按钮
+  links = [
+    { title = "Blogs Club", url = "https://www.blogsclub.org/blog/45.html" },
+    { title = "虫洞", url = "https://foreverblog.cn/go.html" },
+    { title = "十年之约", url = "https://www.foreverblog.cn/blog/6529.html" },
+    { title = "萌ICP备20250188号", url = "https://icp.gov.moe/?keyword=mgrowup.com" }
+  ]
 
 # 主页布局
 [homepage]
