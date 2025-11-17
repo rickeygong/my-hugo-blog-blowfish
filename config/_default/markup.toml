@@ -23,4 +23,5 @@
 
 [tableOfContents]
   startLevel = 2
-  endLevel = 4
+  #endLevel = 4
+  endLevel = 3 # 不包含 endLevel，所以只显示 1-2 级别。

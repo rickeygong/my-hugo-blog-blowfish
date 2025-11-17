@@ -102,7 +102,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showPagination = true # 是否在文章页脚显示下一篇/上一篇链接  
   invertPagination = false # 是否翻转下一篇/上一篇的链接方向  
   showReadingTime = true # 是否显示文章的预估阅读时间
-  showTableOfContents = false
+  showTableOfContents = true
   # showRelatedContent = false
   # relatedContentLimit = 3
 
