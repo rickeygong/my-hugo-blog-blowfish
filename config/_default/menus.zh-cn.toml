@@ -75,5 +75,5 @@
 [[footer]]
   name = "Buy Me a Coffee"
   pre = 'ko-fi'
-  pageRef = "home"
+  pageRef = "donate"
   weight = 40
