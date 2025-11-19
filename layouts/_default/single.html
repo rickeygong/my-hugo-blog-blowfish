@@ -58,6 +58,11 @@
           {{ partial "docinfo.html" . }}
           {{ end }}
 
+          {{/* 自定义内容-3 */}}
+          {{ if .Params.showDonate | default false }}
+          {{ partial "donate.html" . }}
+          {{ end }}
+
           {{ $defaultReplyByEmail := site.Params.replyByEmail }}
           {{ $replyByEmail := default $defaultReplyByEmail .Params.replyByEmail }}
           {{ if $replyByEmail }}
