@@ -1,0 +1,9 @@
+<p class="text-sm text-neutral-500 dark:text-neutral-400" style="margin-top: 10px;">
+    {{ $links := .Site.Params.footer.links }}
+    {{ range $index, $link := $links }}
+    {{ if $index }} | {{ end }} <!-- 添加分隔符 -->
+    <a href="{{ $link.url }}" class="text-primary hover:text-primary/80 transition-colors duration-200">
+        {{ $link.title }}
+    </a>
+    {{ end }}
+</p>
