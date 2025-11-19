@@ -1,9 +1,38 @@
-<p class="text-sm text-neutral-500 dark:text-neutral-400" style="margin-top: 10px;">
+<p class="donghai-footer-links text-sm text-neutral-500 dark:text-neutral-400" style="margin-top: 10px;">
     {{ $links := .Site.Params.footer.links }}
     {{ range $index, $link := $links }}
-    {{ if $index }} | {{ end }} <!-- 添加分隔符 -->
+    {{ if $index }} <span class="divider">|</span> {{ end }}
     <a href="{{ $link.url }}" class="text-primary hover:text-primary/80 transition-colors duration-200">
         {{ $link.title }}
     </a>
     {{ end }}
 </p>
+
+
+<style>
+    /* 手机模式下 footer 链接纵向排列 */
+    @media (max-width: 640px) {
+
+        .donghai-footer-links {
+            display: flex;
+            flex-direction: column;
+            /* 左对齐，可改为 center */
+            align-items: flex-start;
+            /* 每行间距 */
+            gap: 6px;
+        }
+
+        .donghai-footer-links a {
+            display: block;
+        }
+
+        .donghai-footer-links br,
+        .donghai-footer-links span {
+            display: none;
+        }
+
+        .donghai-footer-links .divider {
+            display: none;
+        }
+    }
+</style>
