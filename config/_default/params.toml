@@ -1,14 +1,14 @@
-# -- Theme Options --
-# These options control how the theme functions and allow you to
-# customise the display of your website.
+# -- 主题选项 --
+# 这些选项控制主题的功能，并允许您
+# 自定义网站的显示效果。
 #
-# Refer to the theme docs for more details about each of these parameters.
+# 有关每个参数的详细信息，请参阅主题文档。
 # https://blowfish.page/docs/configuration/#theme-parameters
 
 # 配色方案，https://blowfish.page/zh-cn/docs/getting-started/#avocado
-colorScheme = "Blowfish"
+colorScheme = "blowfish"
 defaultAppearance = "dark" # valid options: light or dark
-autoSwitchAppearance = false
+autoSwitchAppearance = false # 主题外观是否根据访问者操作系统的偏好自动切换。设置为 false 会强制网站始终使用 defaultAppearance
 
 enableA11y = false # 是否启用无障碍切换按钮
 enableSearch = true # 是否开启网站的搜索功能，设为 true 即为启用。注意，搜索功能依赖于站点设置中的 outputs.home 设置，请确保此值配置正确
@@ -25,16 +25,16 @@ replyByEmail = false
 # 用于支持搜索引擎爬虫如何处理你的网站。如果设置了该值，它将被输出在页面头部。具体的参数值请参考 Google 文档
 # robots = ""
 
-disableImageOptimization = false
-disableImageOptimizationMD = false
-disableTextInHeader = false
+disableImageOptimization = false # 禁用图片上所有图片的调整大小和优化功能，使用 Markdown 语法插入的图片（![](image.jpg)）除外
+disableImageOptimizationMD = false # 所有以 Markdown 语法（![](image.jpg)）插入的图片，禁用其调整大小和优化功能
+disableTextInHeader = false # 宽度（以像素为单位）用于缩放背景图像
 # backgroundImageWidth = 1200
 
-#defaultBackgroundImage = "img/bluebg.png" # 设置默认背景图，用于 background 和 hero 布局下的主页
-# defaultFeaturedImage = "IMAGE.jpg" # used as default for featured images in all articles
-# defaultSocialImage = "/android-chrome-512x512.png" # used as default for social media sharing (Open Graph and Twitter)
-hotlinkFeatureImage = false
-# imagePosition = "50% 50%"
+defaultBackgroundImage = "img/ocean.jpg" # 设置默认背景图，用于 background 和 hero 布局下的主页
+#defaultFeaturedImage = "img/my-bgimg.jpg" # 设置默认背景图片，用于所有文章的featured图片，可以通过文章目录中的 featured 图片替换
+# defaultSocialImage = "/android-chrome-512x512.png" # 社交媒体分享（Open Graph 和 Twitter）使用的默认图片，可以通过文章目录中的 featured 图片替换
+hotlinkFeatureImage = false # 在文章特色图片和文章卡片中外链图片。这些图片不会被 Hugo 处理
+# imagePosition = "50% 50%" # 使用 object-position 属性设置默认图像的位置
 
 # 当菜单被选择时，标记主菜单中的菜单项
 highlightCurrentMenuArea = true
@@ -47,12 +47,16 @@ smartTOC = true
 # CSS/JS文件指纹的哈希算法，防止浏览器缓存问题
 fingerprintAlgorithm = "sha512" # Valid values are "sha512" (default), "sha384", "sha256"
 
-giteaDefaultServer = "https://git.fsfe.org"
-forgejoDefaultServer = "https://v11.next.forgejo.org"
+giteaDefaultServer = "https://git.fsfe.org" # 短代码 gitea 的默认 server 参数
+forgejoDefaultServer = "https://v11.next.forgejo.org" # 短代码 forgejo 的默认 server 参数
 
 # 定义整个站点的页头的布局，支持的参数有 basic、fixed、fixed-fill、and fixed-fill-blur.
 [header]
-  layout = "fixed" # valid options: basic, fixed, fixed-fill, fixed-gradient, fixed-fill-blur
+  # layout = "basic"
+  # layout = "fixed"
+  # layout = "fixed-fill"
+  # layout = "fixed-gradient"
+  layout = "fixed-fill-blur" # 透明 + 毛玻璃模糊效果
 
 [footer]
   showMenu = true # 显示/隐藏页面底部菜单
@@ -77,47 +81,48 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showMoreLinkDest = "/posts/" # 更多按钮所指向的位置
   cardView = true # 将列表展示为卡片容器
   cardViewScreenWidth = false # 增强列表中卡片的宽度，使其可以占据可用的全部宽度
-  layoutBackgroundBlur = false # 向下滚动主页时，是否模糊背景图
+  layoutBackgroundBlur = true # 向下滚动主页时，是否模糊背景图
   disableHeroImageFilter = false # 主页背景是否套用图片滤镜
 
 [article]
   showDate = true
   showViews = false # # 是否显示文章和列表页面的阅读量。这需要集成 firebase
   showLikes = false # 是否显示文章和列表页面的点赞量。这需要集成 firebase
-  showDateOnlyInArticle = false
-  showDateUpdated = false
-  showAuthor = true
-  showAuthorBottom = false
+  showDateOnlyInArticle = false # 是否在文章内显示日期，不影响文章列表或卡片页面的日期显示
+  showDateUpdated = false # 是否展示文章的更新日期
+  showAuthor = false # 是否在文章底部显示作者框
+  showAuthorBottom = false # 作者框显示在每页的底部而不是顶部
   showHero = true # 文章缩略图/头图
-  # heroStyle = "basic" # valid options: basic, big, background, thumbAndBackground
-  layoutBackgroundBlur = false # 向下滚动主页时，是否模糊背景图
+  heroStyle = "thumbAndBackground" # valid options: basic, big, background, thumbAndBackground
+  layoutBackgroundBlur = true # 向下滚动主页时，是否模糊背景图
   layoutBackgroundHeaderSpace = false # 在标题和正文之间添加空白区域间隔
   showBreadcrumbs = false # 是否在文章或列表页面显示面包屑导航
-  showDraftLabel = true
-  showEdit = false
+  showDraftLabel = true # 当使用 --buildDrafts 构建网站时，是否在文章旁边显示草稿
+  showEdit = false # 是否展示编辑文章的链接
   # editURL = "https://github.com/username/repo/"
-  editAppendPath = true
+  editAppendPath = true # 当激活 article.showEdit 参数，是否将文章的路径附加到 article.editURL 参数所设置的 URL 后面
   seriesOpened = true # 是否打开系列模块
   showHeadingAnchors = true # 是否在文章的标题旁显示锚点链接
   showPagination = true # 是否在文章页脚显示下一篇/上一篇链接  
   invertPagination = false # 是否翻转下一篇/上一篇的链接方向  
-  showReadingTime = true # 是否显示文章的预估阅读时间
+  showReadingTime = false # 是否显示文章的预估阅读时间
   showTableOfContents = true # 是否显示文章目录
-  # showRelatedContent = false
-  # relatedContentLimit = 3
+  # showRelatedContent = false # 为文章显示相关内容。如果你想要启用此功能，请检查 hugo.toml 文件并复制所有 related 相关的参数，如果你想自定义，也可以对 hugo.toml 添加额外配置。更多内容请参考 Hugo 文档 中关于 related 的内容
+  # relatedContentLimit = 3 # 如果启用showRelatedContent，则限制显示相关文章的数量
 
   # 是否显示文章关联的分类/标签
-  showTaxonomies = false # use showTaxonomies OR showCategoryOnly, not both
-  showCategoryOnly = false # use showTaxonomies OR showCategoryOnly, not both
-  showAuthorsBadges = false
-  showWordCount = true
+  showTaxonomies = false # 是否显示文章的分类或标签信息
+  showCategoryOnly = true # use showTaxonomies OR showCategoryOnly, not both
+  showAuthorsBadges = true # 是否在文章作者旁显示徽章
+  showShareButtons = true # 是否显示文章分享按钮
+  showWordCount = false # 是否显示文章字数统计
   # sharingLinks = [ "linkedin", "twitter", "bluesky", "mastodon", "reddit", "pinterest", "facebook", "email", "whatsapp", "telegram", "line"]
-  showZenMode = false
+  showZenMode = true #指定是否激活文章阅读的禅模式，即隐藏常规的界面元素
 
 # 文章页
 [list]
-  showHero = false
-  heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
+  showHero = true
+  heroStyle = "thumbAndBackground" # valid options: basic, big, background, thumbAndBackground
   layoutBackgroundBlur = true # only used when heroStyle equals background or thumbAndBackground
   layoutBackgroundHeaderSpace = true # only used when heroStyle equals background
   showBreadcrumbs = false # 是否在标题栏显示面包屑导航
@@ -139,9 +144,9 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
 # 分类法
 [taxonomy]
   showTermCount = true # 是否在分类列表总显示对应的数量
-  showHero = false # 缩略图是否会在每个页面中作为 hero 图像显示
-  # heroStyle = "basic" # valid options: basic, big, background, thumbAndBackground
-  showBreadcrumbs = false
+  showHero = true # 缩略图是否会在每个页面中作为 hero 图像显示
+  heroStyle = "thumbAndBackground" # valid options: basic, big, background, thumbAndBackground
+  showBreadcrumbs = false # 是否在标题栏显示面包屑导航
   showViews = false # 是否显示文章阅读量。这需要集成 firebase
   showLikes = false
   showTableOfContents = false # 是否显示目录
@@ -149,61 +154,15 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
 
 # 术语/词语/措辞
 [term]
-  showHero = false
-  # heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
-  showBreadcrumbs = false
+  showHero = true
+  heroStyle = "thumbAndBackground"
+  showBreadcrumbs = false # 是否在标题栏显示面包屑导航
   showViews = false
   showLikes = false
   showTableOfContents = true
   groupByYear = false
   cardView = false
   cardViewScreenWidth = false
-
-# Firebase(Firebase 平台)
-[firebase]
-  # apiKey = "XXXXXX"
-  # authDomain = "XXXXXX"
-  # projectId = "XXXXXX"
-  # storageBucket = "XXXXXX"
-  # messagingSenderId = "XXXXXX"
-  # appId = "XXXXXX"
-  # measurementId = "XXXXXX"
-
-[fathomAnalytics]
-  # site = "ABC12345"
-  # domain = "llama.yoursite.com"
-
-[umamiAnalytics]
-  # websiteid = "ABC12345"
-  # domain = "llama.yoursite.com"
-  # dataDomains = "yoursite.com,yoursite2.com"
-  # scriptName = ""
-  # enableTrackEvent = true
-
-[selineAnalytics]
-  # token = "XXXXXX"
-  # enableTrackEvent = true
-
-[buymeacoffee]
-  # identifier = ""
-  # globalWidget = true
-  # globalWidgetMessage = "Hello"
-  # globalWidgetColor = "#FFDD00"
-  # globalWidgetPosition = "right"
-
-[verification]
-  # google = ""
-  # bing = ""
-  # pinterest = ""
-  # yandex = ""
-  # fediverse = ""
-
-[rssnext]
-  # feedId = ""
-  # userId = ""
-
-[advertisement]
-  # adsense = ""
 
 [docInfo]
   showDocInfo= true # 默认显示 "文档信息"

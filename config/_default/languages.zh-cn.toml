@@ -13,7 +13,7 @@ title = "Donghai Gong"
 
 [params.author]
   name = "Donghai" # 作者名。此参数将展示在文章页脚。并且如果主页使用了个人资料布局，也会展示此值
-  image = "img/ava.png" # 作者头像的文件路径。图像应该是 1:1 的宽高比。可以放在网站的 assets/ 文件夹中，也可以是外部 URL
+  image = "img/guaishou.png" # 作者头像的文件路径。图像应该是 1:1 的宽高比。可以放在网站的 assets/ 文件夹中，也可以是外部 URL
   headline = "Software Engineer | using Xamarin, .NET, MSSQL"
   #headline = "我真诚的记录着，因为生活值得" # 包含作者头衔的 Markdown。它将展示在主页中作者姓名打分下方
   bio = "我真诚的记录着，因为生活值得" # 包含作者简介的 Markdown。它将展示在文章页脚
