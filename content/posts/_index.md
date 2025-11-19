@@ -2,16 +2,7 @@
 title: "文章"
 draft: false
 
-showDate : false
-showDateUpdated : false
-showHeadingAnchors : false
-showPagination : false
-showReadingTime : false
-showTableOfContents : true
-showTaxonomies : false 
-showWordCount : false
-showSummary : false
-sharingLinks : false
+
 ---
 
-这里是所有的文章。
+这里是所有已发布的文章，按时间倒序排列。

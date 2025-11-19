@@ -30,14 +30,14 @@ disableImageOptimizationMD = false
 disableTextInHeader = false
 # backgroundImageWidth = 1200
 
-defaultBackgroundImage = "img/bluebg.png" # 设置默认背景图，用于 background 和 hero 布局下的主页
+#defaultBackgroundImage = "img/bluebg.png" # 设置默认背景图，用于 background 和 hero 布局下的主页
 # defaultFeaturedImage = "IMAGE.jpg" # used as default for featured images in all articles
 # defaultSocialImage = "/android-chrome-512x512.png" # used as default for social media sharing (Open Graph and Twitter)
 hotlinkFeatureImage = false
 # imagePosition = "50% 50%"
 
 # 当菜单被选择时，标记主菜单中的菜单项
-# highlightCurrentMenuArea = true
+highlightCurrentMenuArea = true
 
 # 开启智能目录，视图中的项目将会被高亮显示
 smartTOC = true
