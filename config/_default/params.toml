@@ -204,3 +204,8 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
 
 [advertisement]
   # adsense = ""
+
+[docinfo]
+  showDocInfo= true # 默认显示 "文档信息"
+  licenseLink= "https://creativecommons.org/licenses/by-nc/4.0/"
+  licenseName= "CC BY-NC 4.0"

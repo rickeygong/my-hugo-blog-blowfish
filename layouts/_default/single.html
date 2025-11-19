@@ -49,7 +49,15 @@
         {{ partial "series/series.html" . }}
         <div class="article-content max-w-prose mb-20">
           {{ .Content }}
+
+          {{/* 自定义内容-1 */}}
           <p>（完）</p>
+
+          {{/* 自定义内容-2 */}}
+          {{ if .Params.showDocInfo | default false }}
+          {{ partial "docinfo.html" . }}
+          {{ end }}
+
           {{ $defaultReplyByEmail := site.Params.replyByEmail }}
           {{ $replyByEmail := default $defaultReplyByEmail .Params.replyByEmail }}
           {{ if $replyByEmail }}
