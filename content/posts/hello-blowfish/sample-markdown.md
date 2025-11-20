@@ -111,6 +111,21 @@ Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sap
 </html>
 {{< /highlight >}}
 
+或者
+
+```html {lineNos=true hl_lines=[4,"7-9"]}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Example HTML5 Document</title>
+</head>
+<body>
+  <p>Test</p>
+</body>
+</html>
+```
+
 ## 列表
 
 ### 有序列表
