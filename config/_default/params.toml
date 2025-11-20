@@ -17,7 +17,7 @@ enableSearch = true # 是否开启网站的搜索功能，设为 true 即为启�
 enableCodeCopy = true
 
 # 是否在发布后启用“通过邮件回复”的链接
-replyByEmail = false 
+replyByEmail = false
 
 # 指定最近文章中应该展示的模块。 如果没有指定，则使用文章数量最多的板块
 # mainSections = ["section1", "section2"]
@@ -109,8 +109,6 @@ forgejoDefaultServer = "https://v11.next.forgejo.org" # 短代码 forgejo 的默
   showTableOfContents = true # 是否显示文章目录
   # showRelatedContent = false # 为文章显示相关内容。如果你想要启用此功能，请检查 hugo.toml 文件并复制所有 related 相关的参数，如果你想自定义，也可以对 hugo.toml 添加额外配置。更多内容请参考 Hugo 文档 中关于 related 的内容
   # relatedContentLimit = 3 # 如果启用showRelatedContent，则限制显示相关文章的数量
-
-  # 是否显示文章关联的分类/标签
   showTaxonomies = false # 是否显示文章的分类或标签信息
   showCategoryOnly = true # use showTaxonomies OR showCategoryOnly, not both
   showAuthorsBadges = true # 是否在文章作者旁显示徽章
@@ -118,6 +116,11 @@ forgejoDefaultServer = "https://v11.next.forgejo.org" # 短代码 forgejo 的默
   showWordCount = false # 是否显示文章字数统计
   # sharingLinks = [ "linkedin", "twitter", "bluesky", "mastodon", "reddit", "pinterest", "facebook", "email", "whatsapp", "telegram", "line"]
   showZenMode = true #指定是否激活文章阅读的禅模式，即隐藏常规的界面元素
+  # 如下是自定义的参数
+  showDonate = true # 默认显示文章底部的"请喝咖啡"
+  showDocInfo= true # 默认显示文章底部的"文档信息"
+  licenseLink = "https://creativecommons.org/licenses/by-nc/4.0/" # 版权信息
+  licenseName = "CC BY-NC 4.0" # 版权信息
 
 # 文章页
 [list]
@@ -163,8 +166,3 @@ forgejoDefaultServer = "https://v11.next.forgejo.org" # 短代码 forgejo 的默
   groupByYear = false
   cardView = false
   cardViewScreenWidth = false
-
-[docInfo]
-  showDocInfo= true # 默认显示 "文档信息"
-  licenseLink= "https://creativecommons.org/licenses/by-nc/4.0/"
-  licenseName= "CC BY-NC 4.0"

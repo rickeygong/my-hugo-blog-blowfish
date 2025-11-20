@@ -54,12 +54,12 @@
           <p>（完）</p>
 
           {{/* 自定义内容-2 */}}
-          {{ if .Params.showDocInfo | default false }}
+          {{ if .Params.showDocInfo | default .Site.Params.Article.showDocInfo }}
           {{ partial "docinfo.html" . }}
           {{ end }}
 
           {{/* 自定义内容-3 */}}
-          {{ if .Params.showDonate | default false }}
+          {{ if .Params.showDonate | default .Site.Params.Article.showDonate }}
           {{ partial "donate.html" . }}
           {{ end }}
 

@@ -11,6 +11,9 @@ showWordCount : false
 showReadingTime : false
 showAuthor: false
 showAuthorBottom: false
+
+showDocInfo: false
+showDonate: false
 ---
 
 ## 标题 1
