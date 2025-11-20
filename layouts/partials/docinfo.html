@@ -24,33 +24,73 @@
 </div>
 
 <style>
-    .donghai-asset-footer {
-        margin: 0 auto;
-        padding: 15px;
-        border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    }
+    /* ---- 毛玻璃容器：适用于文档信息盒子 ---- */
+.donghai-asset-footer {
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 12px;
 
-    .doc-info-meta-info {
-        line-height: 1.3;
-    }
+    /* 半透明背景 */
+    background: rgba(255, 255, 255, 0.25);
 
-    .doc-info-meta-info p {
-        margin: 5px 0;
-        font-size: 0.875rem
-    }
+    /* 毛玻璃效果 */
+    backdrop-filter: blur(14px) saturate(180%);
+    -webkit-backdrop-filter: blur(14px) saturate(180%);
 
-    .doc-info-divider {
-        /* 去掉默认边框 */
-        border: none;
+    /* 毛玻璃风格边框 */
+    border: 1px solid rgba(255, 255, 255, 0.35);
 
-        /* 横线厚度 */
-        height: 0.5px;
+    /* 现代阴影 */
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.08),
+        0 0 0 1px rgba(255, 255, 255, 0.2) inset;
 
-        /* 横线颜色 */
-        background-color: #ccc;
+    transition: box-shadow .25s ease;
+}
 
-        /* 上下间距，可以根据需要调整 */
-        margin: 10px 0;
-    }
+/* 鼠标悬停：轻微浮起效果 */
+.donghai-asset-footer:hover {
+    box-shadow:
+        0 12px 40px rgba(0, 0, 0, 0.12),
+        0 0 0 1px rgba(255, 255, 255, 0.25) inset;
+}
+
+
+/* ---- 夜间模式玻璃效果 ---- */
+.dark .donghai-asset-footer {
+    background: rgba(32, 32, 32, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(16px) saturate(160%);
+    -webkit-backdrop-filter: blur(16px) saturate(160%);
+
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.45),
+        0 0 0 1px rgba(255, 255, 255, 0.06) inset;
+}
+
+
+/* ---- 原有排版保留 ---- */
+.doc-info-meta-info {
+    line-height: 1.4;
+}
+
+.doc-info-meta-info p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+/* 分割线 */
+.doc-info-divider {
+    border: none;
+    height: 0.5px;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
+}
+
+/* 夜间模式分割线 */
+.dark .doc-info-divider {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
 </style>
