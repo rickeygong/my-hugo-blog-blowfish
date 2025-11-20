@@ -1,0 +1,157 @@
+{{ define "main" }}
+<article class="max-w-full">
+    {{/* Hero */}}
+    {{ if .Params.showHero | default (site.Params.article.showHero | default false) }}
+    {{ $heroStyle := .Params.heroStyle }}
+    {{ if not $heroStyle }}{{ $heroStyle = site.Params.article.heroStyle }}{{ end }}
+    {{ $heroStyle := print "hero/" $heroStyle ".html" }}
+    {{ if templates.Exists ( printf "partials/%s" $heroStyle ) }}
+    {{ partial $heroStyle . }}
+    {{ else }}
+    {{ partial "hero/basic.html" . }}
+    {{ end }}
+    {{ end }}
+    <header>
+        {{ if .Params.showBreadcrumbs | default (.Site.Params.article.showBreadcrumbs | default false) }}
+        {{ partial "breadcrumbs.html" . }}
+        {{ end }}
+        <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+            {{ .Title | emojify }}
+        </h1>
+    </header>
+    <section class="max-w-full mt-6 prose dark:prose-invert">
+        {{ .Content }}
+        {{/* 自定义 Begin*/}}
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {{ range .Params.links }}
+            <a href="{{ .url }}" title="{{ .name }}" class="friend-link" target="_blank" rel="friend">
+                <div class="friend-link-div">
+                    <div class="friend-link-avatar">
+                        <img src="{{ .avatar }}" class="friend-avatar" loading="lazy" alt="Avatar">
+                    </div>
+                    <div class="friend-link-info">
+                        <i class="fa fa-link" aria-hidden="true"></i>
+                        <span class="friend-name">{{ .name }}</span>
+                        <p class="friend-bio">{{ .bio }}</p>
+                    </div>
+                </div>
+            </a>
+            {{ end }}
+        </div>
+        {{/* 自定义 End*/}}
+    </section>
+    <footer class="pt-8">
+        {{ partial "sharing-links.html" . }}
+    </footer>
+</article>
+<style>
+    /* ---------- 友链卡片样式开始 ---------- */
+    a.friend-link {
+        text-decoration: none;
+        color: inherit;
+        background-size: 0 !important;
+    }
+
+    a.friend-link:hover {
+        text-decoration: none;
+        color: inherit;
+        background-size: 0 !important;
+    }
+
+    .friend-link {
+        display: block;
+        width: 100%;
+        margin: 0.5rem auto;
+        text-decoration: none;
+        border-radius: 12px;
+        overflow: hidden;
+        background-color: #fff;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        transition: transform 0.2s ease;
+    }
+
+    .friend-link-div {
+        display: flex;
+        align-items: center;
+        padding: 0 16px;
+    }
+
+    .friend-avatar {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        object-fit: cover;
+        flex-shrink: 0;
+        margin-right: 10px;
+    }
+
+    .friend-link-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .friend-name {
+        font-size: 16px;
+        font-weight: bolder;
+        font-style: normal;
+        color: #444;
+        margin-bottom: 0;
+        margin-top: 0;
+        margin-left: 12px;
+    }
+
+    .friend-bio {
+        font-size: 14px;
+        color: #666;
+        line-height: 1.4;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 12px;
+    }
+
+    /* 夜间模式适配 */
+    .dark .friend-link {
+        background-color: #545c67;
+        box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+    }
+
+    .dark .friend-name {
+        color: #ddd;
+    }
+
+    .dark .friend-bio {
+        color: #F5F5F5;
+    }
+
+    .dark .friend-avatar {
+        border-color: #444;
+    }
+
+    /* 响应式优化 */
+    @media screen and (max-width: 600px) {
+        .friend-link-div {
+            flex-direction: row;
+            padding: 12px 16px;
+        }
+
+        .friend-avatar {
+            width: 56px;
+            height: 56px;
+            margin-right: 12px;
+        }
+
+        .friend-name {
+            font-size: 16px;
+        }
+
+        .friend-bio {
+            font-size: 14px;
+        }
+    }
+
+    /* ---------- 友链卡片样式结束 ---------- */
+</style>
+{{ end }}
