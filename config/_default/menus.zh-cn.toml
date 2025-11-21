@@ -14,33 +14,33 @@
 # 文章、分类、标签、归档、链接、开往
 
 [[main]]
-  name = "Posts"
+  name = "文章"
   pageRef = "posts"
   weight = 10
 
 [[main]]
-  name = "Categories"
+  name = "分类"
   pageRef = "categories"
   weight = 20
 
 [[main]]
-  name = "Tags"
+  name = "标签"
   pageRef = "tags"
   weight = 30
 
 [[main]]
-  name = "Archives"
+  name = "归档"
   pageRef = "archives"
   weight = 40
 
 [[main]]
-  name = "Links"
+  name = "链接"
   pageRef = "links"
   weight = 50
 
 [[main]]
   pre = "train-subway"
-  name = "Travelling"
+  name = "开往"
   url = "https://www.travellings.cn/go.html"
   weight = 60
 
@@ -61,7 +61,7 @@
 # the copyright notice. Configure as per the main menu above.
 
 [[footer]]
-  name = "About"
+  name = "关于"
   pre='circle-user'
   pageRef = "about"
   weight = 10
@@ -73,7 +73,7 @@
   weight = 30
 
 [[footer]]
-  name = "Buy Me a Coffee"
+  name = "请喝咖啡"
   pre = 'ko-fi'
   pageRef = "donate"
   weight = 40
