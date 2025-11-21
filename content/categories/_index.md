@@ -14,4 +14,4 @@ showDocInfo: false
 showDonate: false
 ---
 
-~这里是分类页！~
+~这里是分类页！~ 浏览所有分类，发现感兴趣的内容。
