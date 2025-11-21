@@ -1,5 +1,5 @@
 ---
-title: "Tags"
+title: "标签"
 description: ""
 summary: ""
 showDate: false
